@@ -1,25 +1,25 @@
 package contactBook;
 
+import java.util.Arrays;
 
 public class Contact {
 
 	private String nombre;
 	private String apellido;
-	private String correosElectronicos;
+	private String correosElectronicos[];
 	private int fijo;
 	private long Celular;
 	private String direccion;
 	
 	
 
-	public Contact(String nombre, String apellido, String correosElectronicos, int fijo, int celular,
+	public Contact(String nombre, String apellido, String[] correosElectronicos, int fijo, long l,
 			String direccion) {
-		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.correosElectronicos = correosElectronicos;
 		this.fijo = fijo;
-		Celular = celular;
+		Celular = l;
 		this.direccion = direccion;
 	}
 	
@@ -41,12 +41,12 @@ public class Contact {
 		this.apellido = apellido;
 	}
 
-	public String getCorreosElectronicos() {
+	public String[] getCorreosElectronicos() {
 		return correosElectronicos;
 	}
 
-	public void setCorreosElectronicos(String correosElectronicos) {
-		this.correosElectronicos = correosElectronicos;
+	public void setCorreosElectronicos(String[] correos) {
+		this.correosElectronicos = correos;
 	}
 
 	public int getFijo() {
@@ -78,7 +78,7 @@ public class Contact {
 	public String toString() {
 		return "Nombre: " + nombre + "   -Apellido: " + apellido +  "   -Telefono fijo: " + fijo + "   -Celular: " + Celular + "   -Direccion: "
 				+ direccion + "\nCorreosElectronicos:"
-						+ correosElectronicos;
+						+ Arrays.toString(correosElectronicos)+"\n";
 	}
 
 }
